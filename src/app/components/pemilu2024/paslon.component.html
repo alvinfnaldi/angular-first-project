@@ -1,0 +1,24 @@
+<div class="container d-flex justify-content-center">
+  <div class="card mb-3" style="width: 18rem">
+    <img src="{{ paslon.photo }}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <div class="text-center">
+        <h5 class="card-title">{{ paslon.namaPaslon }}</h5>
+        <p class="card-text lead">{{ paslon.moto }}</p>
+        <p class="card-text">
+          Votes : <b>{{ paslon.votes }}</b>
+        </p>
+
+        <button
+          (click)="voteDown()"
+          class="btn btn-primary"
+          style="margin-right: 10px"
+          [disabled]="paslon.votes == 0 ? true : null"
+        >
+          -
+        </button>
+        <button (click)="voteUp()" class="btn btn-primary">+</button>
+      </div>
+    </div>
+  </div>
+</div>

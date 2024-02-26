@@ -1,0 +1,44 @@
+<div class="container">
+  <h2>Pemilu Capres 2024</h2>
+  <!-- #newNomor dll, binding resolve -->
+  <form>
+    <div class="form-group">
+      <label for="name">Nomor Paslon</label>
+      <input
+        type="text"
+        class="form-control"
+        name="nomor"
+        required
+        id="nomor"
+        #newNomor
+      />
+    </div>
+    <div class="form-group">
+      <label for="name">Nama Paslon</label>
+      <input
+        type="text"
+        class="form-control"
+        required
+        id="namaPaslon"
+        #newNamaPaslon
+      />
+    </div>
+    <div class="form-group">
+      <label for="name">Photo</label>
+      <input type="text" class="form-control" id="photo" #newPhoto />
+    </div>
+
+    <div class="form-group">
+      <label for="name">Moto</label>
+      <input type="text" class="form-control" id="moto" #newMoto />
+    </div>
+
+    <button (click)="addPaslon(newNomor, newNamaPaslon, newPhoto, newMoto)">
+      Submit
+    </button>
+  </form>
+
+  <div class="container" *ngFor="let paslon of sortedPaslonVotes()">
+    <app-paslon [paslon]="paslon" />
+  </div>
+</div>
