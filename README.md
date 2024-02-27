@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
 
+## Demo CRUD API Product
+
+![crud-api-product](https://github.com/alvinfnaldi/angular-first-project/assets/30985202/1e544ff8-74ae-4b58-a74a-f3a429a4d7e1)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
